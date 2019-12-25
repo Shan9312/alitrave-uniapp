@@ -1,0 +1,31 @@
+
+.homeload.data-v-60d9450a{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	overflow: hidden;
+	background: rgba(242,243,244,0.6);
+}
+.home-img.data-v-60d9450a{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.home-img image.data-v-60d9450a{
+	width: 200rpx;
+	height: 200rpx;
+	background: rgb(0,0,0,0.2);
+	border-radius:10rpx;
+}
+
