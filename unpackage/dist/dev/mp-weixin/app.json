@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/strategy/strategy",
+    "pages/city/city",
     "pages/index/index",
+    "pages/strategy/strategy",
     "pages/my/my"
   ],
   "subPackages": [],
@@ -41,6 +42,5 @@
     "loader": "/element/loading",
     "nonedata": "/element/none",
     "homeload": "/element/homeload"
-  },
-  "sitemapLocation": "sitemap99.json"
+  }
 }

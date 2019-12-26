@@ -1528,17 +1528,6 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 139:
-/*!*************************************************************************************************************************!*\
-  !*** /Users/haoshanshan/Documents/project-shan/shan-demo/shan-Web/alitrave-uniapp/node_modules/animate.css/animate.css ***!
-  \*************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ 14:
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -1646,7 +1635,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 141:
+/***/ 142:
 /*!*************************************************************************************************************!*\
   !*** /Users/haoshanshan/Documents/project-shan/shan-demo/shan-Web/alitrave-uniapp/common/qqmap-wx-jssdk.js ***!
   \*************************************************************************************************************/
@@ -3792,6 +3781,17 @@ var index_esm = {
 
 /* harmony default export */ __webpack_exports__["default"] = (index_esm);
 
+
+/***/ }),
+
+/***/ 17:
+/*!*************************************************************************************************************************!*\
+  !*** /Users/haoshanshan/Documents/project-shan/shan-demo/shan-Web/alitrave-uniapp/node_modules/animate.css/animate.css ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -9758,7 +9758,7 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /*!********************************************************************************************************!*\
   !*** /Users/haoshanshan/Documents/project-shan/shan-demo/shan-Web/alitrave-uniapp/common/cloundfun.js ***!
   \********************************************************************************************************/
@@ -9825,6 +9825,40 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ 33:
+/*!****************************************************************************************************!*\
+  !*** /Users/haoshanshan/Documents/project-shan/shan-demo/shan-Web/alitrave-uniapp/common/unitl.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.addressData = void 0; // 定位
+// 引入SDK核心类
+var QQMapWX = __webpack_require__(/*! ./qqmap-wx-jssdk.js */ 142);
+var qqmapsdk;
+
+var addressData = function addressData() {
+  return new Promise(function (resolve, reject) {
+    // 注意点：1.定位需要在pages.json中表明一下promise；2.微信开发者工具中也要手动加入这段promise
+    // 实例化API核心类
+    qqmapsdk = new QQMapWX({
+      key: 'M5IBZ-FPCHS-NM6OI-6CY27-IN2J7-H7FJG' });
+
+    // 腾讯定位api: 逆地址解析：供由坐标到坐标所在位置的文字描述的转换，输入坐标返回地理位置信息和附近poi列表
+    qqmapsdk.reverseGeocoder({
+      success: function success(res) {
+        resolve(res);
+      },
+      fail: function fail(err) {
+        reject(err);
+      } });
+
+  });
+};exports.addressData = addressData;
 
 /***/ }),
 
@@ -10746,7 +10780,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@^2.0.0-alpha-24420191128001","_id"
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "飞猪旅游" }, "pages/strategy/strategy": { "navigationBarTitleText": "攻略" }, "pages/my/my": { "navigationBarTitleText": "我的" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#ffd300", "backgroundColor": "#ffd300" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "飞猪旅游", "usingComponents": { "search": "/pages/index/components/search", "ticket": "/pages/index/components/ticket", "classfiy": "/pages/index/components/classify", "scroll-content": "/pages/index/components/scroll-content", "article": "/pages/index/components/article", "uni-load-more": "/components/uni-load-more/uni-load-more" } }, "pages/strategy/strategy": { "navigationBarTitleText": "攻略", "usingComponents": { "address": "/pages/strategy/components/address", "locality": "/pages/strategy/components/locality", "content": "/pages/strategy/components/content" } }, "pages/my/my": { "navigationBarTitleText": "我的", "usingComponents": {} }, "pages/city/city": { "navigationBarTitleText": "选择城市", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#ffd300", "backgroundColor": "#ffd300" } };exports.default = _default;
 
 /***/ }),
 

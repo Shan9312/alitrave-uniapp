@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/strategy/strategy",
     "pages/index/index",
+    "pages/strategy/strategy",
     "pages/my/my"
   ],
   "subPackages": [],

@@ -39,6 +39,7 @@
 		methods:{
 			menubtn(index,name){
 				this.num = index;
+				// 让loading 转着，获取数据之后在关闭
 			},
 		}
 	}

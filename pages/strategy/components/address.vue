@@ -6,7 +6,7 @@
 			</view>
 			<view class="address-list">
 				<view class="address-text" @click="chooseCity()">
-					<text class="words">上海市</text>
+					<text class="words">{{address}}</text>
 					<image src="../../../static/tab/jiantouxia.png" mode="widthFix"></image>
 				</view>
 				<text class="words-eng">hello</text>
@@ -23,6 +23,9 @@
 	
 	export default {
 		name:'address',
+		props:{
+			address:String
+		},
 		data() {
 			return {}
 		}

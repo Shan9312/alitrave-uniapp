@@ -17,6 +17,12 @@
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
+		},
+		{
+			"path": "pages/city/city",
+			"style": {
+				"navigationBarTitleText": "选择城市"
+			}
 		}
 	],
 	"globalStyle": {
@@ -50,6 +56,11 @@
 				"text":"我的"
 			}
 		]
+	},
+	"permission": {
+			"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+			}
 	}
 
 }
