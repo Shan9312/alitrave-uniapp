@@ -23,8 +23,20 @@
 			"style": {
 				"navigationBarTitleText": "选择城市"
 			}
-		}
-	],
+		},
+		{
+			"path": "pages/travels/travels",
+			"style": {
+				"navigationBarTitleText": "发表旅行游记"
+			}
+		},
+	    {
+            "path" : "pages/db-data/db-data",
+            "style" : {
+				"navigationBarTitleText": "云开发"
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -54,13 +66,30 @@
 				"iconPath":"static/tab/wodea.png",
 				"selectedIconPath":"static/tab/wodeb.png",
 				"text":"我的"
+			},
+			{
+				"pagePath":"pages/db-data/db-data",
+				"iconPath":"static/tab/wodea.png",
+				"selectedIconPath":"static/tab/wodeb.png",
+				"text":"云开发"
 			}
+		
 		]
 	},
 	"permission": {
 			"scope.userLocation": {
 			"desc": "你的位置信息将用于小程序位置接口的效果展示"
 			}
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
 	}
 
 }

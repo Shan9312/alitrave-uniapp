@@ -10,7 +10,7 @@
 		<Content></Content>
 		<!-- 发表 + icon -->
 		<view class="publish animated fadeInUp">
-			<image src="../../static/tab/fab.png" mode="widthFix"></image>
+			<image src="../../static/tab/fab.png" mode="widthFix"  @click="travels"></image>
 		</view>
 	</view>
 </template>
@@ -20,6 +20,8 @@
 	import Locality from './components/locality.vue'
 	import Content from './components/content.vue'
 	import { addressData } from '../../common/unitl.js'
+	import { mapState } from 'vuex'
+	
 	
 	export default{
 		components:{
@@ -31,6 +33,21 @@
 			return{
 				loadingShow: false,
 				address:"", // 用户地址
+				addressData:"",
+			}
+		},
+		// 计算属性
+		computed:{
+			...mapState(['city']),
+			count(){
+				this.addressData = this.city;
+			}
+		},
+		// 监听器
+		// watch 会监听vuex中的值，若发送改变 会发送变化
+		watch:{
+			addressData(newVal,oldVal){
+				this.address = newVal;
 			}
 		},
 		created(){
@@ -43,13 +60,19 @@
 				addressData().then((res)=>{
 					this.address= res.result.ad_info.city;
 				}).catch(err=>{
-					this.address= '北京市';
+					this.address= '暂无无法获取定位';
 				})
 				
 			},
 			handleCity(){
 				
 			},
+			// 跳到发表页面
+			travels(){
+				uni.navigateTo({
+					url:'../travels/travels'
+				})
+			}
 			
 		}
 	}

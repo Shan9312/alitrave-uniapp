@@ -1,1 +1,1 @@
-<view>my</view>
+<view>my5<video src controls="{{true}}"></video></view>

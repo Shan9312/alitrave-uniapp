@@ -22,6 +22,7 @@ const state = {
 	loading: '', // tab 切换的状态
 	navObj,
 	nonedata: '',
+	city:'' // 城市跳转到攻略页面到路由参数
 }
 
 export default new Vuex.Store({
@@ -50,6 +51,10 @@ export default new Vuex.Store({
 		},
 		nonemuat(state,val){
 			state.nonedata = val;
-		}
+		},
+		citymuts(state,city){
+			state.city= city;
+			console.log(city,'vuex')
+		},
 	},
 })

@@ -46,11 +46,20 @@
 </template>
 
 <script>
+	import { addressData } from '../../common/unitl.js'
+	// 引入SDK核心类
+	var  QQMapWX = require('../../common/qqmap-wx-jssdk.js');
+	var  qqmapsdk =new QQMapWX({
+			key: 'M5IBZ-FPCHS-NM6OI-6CY27-IN2J7-H7FJG' // 申请的key
+		}); 
+	
+	
 	export default {
 		name: 'city',
 		data() {
 			return {
 				citynone: true,
+				address:'',
 				city: [{
 						"name": '昆明市'
 					},
@@ -73,10 +82,77 @@
 						"name": '杭州市'
 					}
 				],
+				citydata:[],
 			}
 		},
-		created() {},
-		methods: {}
+		created() {
+			// 使用腾讯服务定位
+			this.addRess();
+		},
+		methods: {
+			// 输入框的内容
+			searchInput(e){
+				console.log(e,'输入框');
+				qqmapsdk.getSuggestion({
+					keyword: e.detail.value, //用户输
+					filter: 'category=大学,中学',
+					success:(res) =>{
+						console.log('res',res);
+						let city = res.data.length && res.data[0].city || '';
+						let arr = res.data.map(item =>{
+							return item.title;
+						})
+						this.citydata=[city,...arr];
+					},
+					fail:(err) =>{
+						console.log('err',err)
+					}
+				})
+				
+			},
+			// 搜索触发
+			searchCity(e){
+				this.citynone = false;
+			},
+			addRess(){
+				// 定位
+				addressData().then((res)=>{
+					this.address= res.result.ad_info.city;
+				}).catch(err=>{
+					this.address= '暂无无法获取定位';
+				})
+				
+			},
+			// 取消
+			canCel(){
+				this.citynone=true;
+				this.keywoeds = '';
+				this.citydata = [];
+			},
+			// 选择城市
+			clickCity(val){
+				this.rouTes(val)
+			},
+			// 热门搜索
+			hotCity(val){
+				this.rouTes(val)
+			},
+			// 跳转到攻略页面
+			rouTes(city){
+				// switch 不能带参数，只能通过vuex
+				this.$store.commit('citymuts',city)
+				uni.navigateBack({
+					 delta: 1
+				})
+				// uni.switchTab({
+				// 	url:"../strategy/strategy"
+				// })
+			},
+			seekCity(city){
+				this.rouTes(city);
+			},
+			
+		}
 	}
 </script>
 

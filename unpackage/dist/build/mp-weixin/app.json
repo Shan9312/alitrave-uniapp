@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/strategy/strategy",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/city/city"
   ],
   "subPackages": [],
   "window": {
@@ -37,6 +38,7 @@
       }
     ]
   },
+  "permission": {},
   "usingComponents": {
     "loader": "/element/loading",
     "nonedata": "/element/none",

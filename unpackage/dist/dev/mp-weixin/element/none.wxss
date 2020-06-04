@@ -1,16 +1,16 @@
 
 .nonedata.data-v-e8bd2206 {
-	text-align: center;
-	margin-top: 80rpx;
+  text-align: center;
+  margin-top: 80rpx;
 }
-.nonedata image.data-v-e8bd2206{
-	width: 200rpx;
-	height: 300rpx;
+.nonedata image.data-v-e8bd2206 {
+  width: 200rpx;
+  height: 300rpx;
 }
-.nonedata text.data-v-e8bd2206{
-	display: block;
-	text-align: center;
-	font-size: 30rpx;
-	color: #333;
+.nonedata text.data-v-e8bd2206 {
+  display: block;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
 }
 

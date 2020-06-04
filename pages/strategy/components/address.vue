@@ -28,6 +28,13 @@
 		},
 		data() {
 			return {}
+		},
+		methods:{
+			chooseCity(){
+				uni.navigateTo({
+					url:'../city/city'
+				})
+			},
 		}
 	}
 </script>

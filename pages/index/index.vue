@@ -3,7 +3,7 @@
 		<!-- 搜索栏 & 轮播图-->
 		<Search :banner="banner"></Search>
 		<!-- ticket 展示图 -->
-		<Ticket></Ticket>
+		<Ticket ></Ticket>
 		<!-- 表格classify -->
 		<Classfiy></Classfiy>
 		<!-- 滑动内容 -->
@@ -111,6 +111,7 @@
 				Promise.all([home(banner),home(tab),homeList(listing,this.pageId)]).then((res) =>{
 					this.banner=res[0].data;
 					this.tab = res[1].data;
+					console.log(this.tab,'tab')
 					this.article = res[2].data;
 					this.homeLoadShow = false;
 				})

@@ -8,7 +8,7 @@ var  addressData = function(){
 		// 注意点：1.定位需要在pages.json中表明一下promise；2.微信开发者工具中也要手动加入这段promise
 		// 实例化API核心类
 		qqmapsdk = new QQMapWX({
-			key: 'M5IBZ-FPCHS-NM6OI-6CY27-IN2J7-H7FJG'
+			key: 'M5IBZ-FPCHS-NM6OI-6CY27-IN2J7-H7FJG' // 申请的key
 		}); 
 		// 腾讯定位api: 逆地址解析：供由坐标到坐标所在位置的文字描述的转换，输入坐标返回地理位置信息和附近poi列表
 		qqmapsdk.reverseGeocoder({
