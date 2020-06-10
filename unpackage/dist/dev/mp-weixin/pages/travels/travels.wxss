@@ -1,4 +1,30 @@
 
+.HMmessages.status{padding-top: 25px;}
+.HMmessages.transparent{padding-top: calc(25px + 88rpx);}
+.HMmessages.transparentH5{padding-top: 44px;}
+@font-face {font-family:"HMfont";src:url('data:application/x-font-woff;charset=utf-8;base64,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');}
+.HMmessages .icon {font-family:"HMfont" !important;font-size:50rpx;font-style:normal;}
+.HMmessages .icon.remind:before {content:"\e719";}
+.HMmessages .icon.error:before {content:"\e71b";}
+.HMmessages .icon.danger:before {content:"\e725";}
+.HMmessages .icon.success:before {content:"\e727";}
+.HMmessages .icon.disable:before {content:"\e734";}
+.HMmessages .icon.help:before {content:"\e73a";}
+.HMmessages .icon.close:before {content:"\e731";}
+.HMmessages {width:100%;height:80rpx;position:fixed;top:-80rpx;left:0;z-index:99999;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-box-align:center;-webkit-align-items:center;align-items:center;}
+.HMmessages.show {-webkit-animation:show 0.3s linear both;animation:show 0.3s linear both;}
+.HMmessages.hide {-webkit-animation:hide 0.3s linear both;animation:hide 0.3s linear both;}
+@-webkit-keyframes show {0% {-webkit-transform:translateY(0);transform:translateY(0);opacity:0;}100% {-webkit-transform:translateY(80rpx);transform:translateY(80rpx);opacity:1;}}
+@keyframes show {0% {-webkit-transform:translateY(0);transform:translateY(0);opacity:0;}100% {-webkit-transform:translateY(80rpx);transform:translateY(80rpx);opacity:1;}}
+@-webkit-keyframes hide {0% {-webkit-transform:translateY(80rpx);transform:translateY(80rpx);opacity:1;}100% {-webkit-transform:translateY(0);transform:translateY(0);opacity:0;}}
+@keyframes hide {0% {-webkit-transform:translateY(80rpx);transform:translateY(80rpx);opacity:1;}100% {-webkit-transform:translateY(0);transform:translateY(0);opacity:0;}}
+.HMmessages .ico {width:80rpx;height:80rpx;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;margin-left:2%;margin-right:-2%;}
+.HMmessages .content {width:100%;height:80rpx;padding:0 2%;font-size:30rpx;white-space:nowrap;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;overflow:hidden;}
+.HMmessages .closeBtn {width:60rpx;height:80rpx;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;margin-right:2%;}
+.HMmessages .closeBtn .close {font-family:"HMfont" !important;font-size:30rpx;font-style:normal;}
+
+
+
 .travels.data-v-0e7bc536{padding: 10rpx 20rpx;}
 .classify text.data-v-0e7bc536{display: block; font-size: 27rpx; color: #14181e; background: #f7f7f7;
 	padding: 10rpx 20rpx; border-radius: 20rpx;

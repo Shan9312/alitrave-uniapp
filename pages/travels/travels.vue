@@ -77,13 +77,160 @@
 	</view>
 </template>
 
-// <script>
-// 	export default{
-// 		data(){
-// 			return:{}
-// 		},
-// 	}
-// </script>
+<script>
+	import {previewImg,addressData} from '../../common/unitl.js'
+	import HMmessages from "@/components/HM-messages/HM-messages.vue"
+	import motal from '../../element/modal.vue' // 
+		
+	export default{
+		data(){
+			return {
+					num:0,
+					fication: [
+						{
+							"name":'景点'
+						},
+						{
+							"name":'美食'
+						},
+						{
+							"name":'网红打卡'
+						}
+					],
+			
+					uploadvideos:false,
+					watchaddress:'',
+					classdata:'景点',  //分类
+					titledata:'',   //标题
+					tipsdata:'',   //描述
+					topimg:[],   //上传的图片
+					videos:'',  //上传的视频
+					address:'', //选择的城市
+					avatarUrl:'', // 用户头像
+					nickName:'', // 用户昵称
+					openid :''	,// 用户openid
+					// 提示用户正在发布
+					reldata:'正在发布...请勿关闭该页面',
+					relend:false
+					
+					
+				}
+		},
+		components:{
+			motal
+		},
+		mounted(){
+			this.addRess()
+		},
+		methods:{
+			// 点击发布
+			suBmitd(){
+				// 判断用户是否登录，登录再提交
+				this.userinfo();
+			},
+			// 判断用户是否登录
+			userinfo(){
+				let db = wx.cloud.database()
+				let users = db.collection('user')
+				// 请求数据库查看用户是否存在，存在就是登陆，反之未登录
+				users.get()
+				.then((res)=>{
+					console.log(res)
+					// length == 0说明用户没有登录
+					if(res.data.length == 0){
+						console.log('没有登录')
+						// 弹出模态框
+						let message = '请登录后再操作'
+						this.$nextTick(()=>{   //dom更新循环结束之后的延迟回调
+							this.$refs.mon.init(message)
+						})
+						
+					}else{
+						console.log('已经登陆')
+					}
+				})
+				.catch((err)=>{
+					console.log(err)
+				})
+			},
+			// 上传图片
+			uploadImg(){
+				uni.chooseImage({
+				    count: 9, //默认9
+				    sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+				    sourceType: ['album'], //从相册选择
+				    success:  (res)=> {
+						console.log(res.tempFilePaths);
+						if(this.topimg.length >=9){
+							return 
+						}else{
+							this.topimg.push(...res.tempFilePaths);
+						}
+						
+				    }
+				});
+			},
+			// 删除图片
+			deleteImg(index){
+				this.topimg.splice(index,1);
+			},
+			
+			// 预览图片
+			preImage(index){
+				previewImg(index,this.topimg).then(res=>{
+					console.log(res,'preimg')
+				})
+			
+			},
+			
+			// 上传视频
+			uploadVideo(){
+				uni.showLoading({
+				    title: '视频加载中'
+				});
+				uni.chooseVideo({
+				   count: 1, // 数量
+				   sourceType: ['camera', 'album'],
+				   
+				   maxDuration: 20, // 拍摄视频最长拍摄时间，单位秒。最长支持 20 秒
+				  
+			   }).then(res=> {
+					   console.log(res);
+					    this.videos= res[1].tempFilePath;
+						this.uploadvideos =true;
+				   }).catch(err =>{
+					    console.log(err,'err');
+				   })
+			},
+		
+		// 删除视频
+		deleteVideo(){
+		  this.videos = ''
+		  this.uploadvideos = false
+		},
+		
+		// 定位
+		addRess(){
+			addressData().then(res=>{
+				console.log(res)
+				this.address = res.result.ad_info.city;
+			});
+		},
+	    // 选择城市
+		chooseCity(){
+			uni.navigateTo({
+				url:'../city/city'
+			})
+		},
+		rouTes(city){
+			this.$store.commit('citymuts',city)
+			uni.navigateBack({
+				 delta: 1
+			})
+		},
+	 },
+	}
+</script>
 
 <style scoped>
 	.travels{padding: 10upx 20upx;}

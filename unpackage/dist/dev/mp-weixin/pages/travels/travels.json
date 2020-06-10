@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "发表旅行游记",
-  "usingComponents": {}
+  "usingComponents": {
+    "motal": "/element/modal"
+  }
 }

@@ -1,0 +1,101 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 模态弹窗布局 */
+.warp.data-v-3fbf4b38{position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 9999;}
+.warp-view.data-v-3fbf4b38{width: 500rpx;
+			height: 200rpx;
+			background: #FFFFFF;
+			margin: auto;
+			position: absolute;
+			-webkit-position:absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border-radius: 8rpx;
+			overflow: hidden;
+}
+.warp-text.data-v-3fbf4b38{text-align: center;
+			margin-top: 30rpx;
+			font-size: 34rpx;
+			color: #666666;}
+.warp-flex.data-v-3fbf4b38{ display: -webkit-box; display: -webkit-flex; display: flex;
+		-webkit-justify-content: space-around;
+		        justify-content: space-around;
+		border-top: 1rpx solid #EEEEEE;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 80rpx;
+		line-height: 80rpx;
+		-webkit-transform: translateZ(0);}
+.warp-flex button.data-v-3fbf4b38{border: none;
+	font-size: 30rpx;}					
+

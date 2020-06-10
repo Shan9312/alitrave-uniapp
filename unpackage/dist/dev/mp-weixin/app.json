@@ -37,12 +37,6 @@
         "iconPath": "static/tab/wodea.png",
         "selectedIconPath": "static/tab/wodeb.png",
         "text": "我的"
-      },
-      {
-        "pagePath": "pages/db-data/db-data",
-        "iconPath": "static/tab/wodea.png",
-        "selectedIconPath": "static/tab/wodeb.png",
-        "text": "云开发"
       }
     ]
   },
@@ -51,5 +45,6 @@
     "loader": "/element/loading",
     "nonedata": "/element/none",
     "homeload": "/element/homeload"
-  }
+  },
+  "sitemapLocation": "sitemap75.json"
 }

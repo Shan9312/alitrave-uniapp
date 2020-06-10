@@ -164,16 +164,73 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* scrool-content 定位*/
-.is_fixed.data-v-83793430{position: fixed; left: 0; right: 0; top: 0;}
+.is_fixed.data-v-83793430 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
 /* 上拉加载的组件样式 */
-.load-more.data-v-83793430{
-	height: 60rpx;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
+.load-more.data-v-83793430 {
+  height: 60rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 

@@ -8855,7 +8855,7 @@ var homeList = function homeList(banner, pageId) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.addressData = void 0; // 定位
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.previewImg = exports.addressData = void 0; // 定位
 // 引入SDK核心类
 var QQMapWX = __webpack_require__(/*! ./qqmap-wx-jssdk.js */ 30);
 var qqmapsdk;
@@ -8877,7 +8877,26 @@ var addressData = function addressData() {
       } });
 
   });
-};exports.addressData = addressData;
+};
+
+// 公用预览 图片
+exports.addressData = addressData;var previewImg = function previewImg(index, imgList) {
+  return new Promise(function (resolve, reject) {
+    // 预览图片
+    uni.previewImage({
+      current: index,
+      urls: imgList,
+      longPressActions: {
+        itemList: ['发送给朋友', '保存图片', '收藏'] } }).
+
+    then(function (res) {
+      resolve(res);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+};exports.previewImg = previewImg;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 30 */
@@ -10010,6 +10029,83 @@ QQMapWX = /*#__PURE__*/function () {"use strict";
 ;
 
 module.exports = QQMapWX;
+
+/***/ }),
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */
+/*!***************************************************************************************************!*\
+  !*** /Users/haoshanshan/Documents/project-shan/shan-demo/shan-Web/alitrave-uniapp/common/list.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.login = exports.preview = exports.addressdata = void 0; // 定位
+// 引入SDK核心类
+var QQMapWX = __webpack_require__(/*! ../common/qqmap-wx-jssdk.js */ 30);
+var qqmapsdk;
+
+// 定位
+var addressdata = function addressdata() {
+  return new Promise(function (resolve, reject) {
+    // 实例化API核心类
+    qqmapsdk = new QQMapWX({
+      key: 'M5IBZ-FPCHS-NM6OI-6CY27-IN2J7-H7FJG' });
+
+    qqmapsdk.reverseGeocoder({
+      success: function success(res) {
+        resolve(res);
+      },
+      fail: function fail(err) {
+        reject(err);
+      } });
+
+  });
+};
+
+// 公用预览图片
+exports.addressdata = addressdata;var preview = function preview(index, imglist) {
+  return new Promise(function (resolve, reject) {
+    uni.previewImage({
+      current: index,
+      urls: imglist,
+      longPressActions: {
+        itemList: ['发送给朋友', '保存图片', '收藏'] } }).
+
+
+    then(function (res) {
+      resolve(res);
+    }).
+    catch(function (err) {
+      reject(err);
+    });
+  });
+};
+
+// 公用存储用户登录数据
+exports.preview = preview;var login = function login(user) {
+  return new Promise(function (resolve, reject) {
+    var db = wx.cloud.database();
+    var users = db.collection('user');
+    users.add({
+      data: user }).
+
+    then(function (res) {
+      resolve(res);
+    }).
+    catch(function (err) {
+      reject(err);
+    });
+  });
+};exports.login = login;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ]]);

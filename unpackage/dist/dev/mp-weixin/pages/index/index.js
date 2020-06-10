@@ -104,7 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uniLoadMore: function() {
-    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 76))
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 94))
   }
 }
 var render = function() {
@@ -174,13 +174,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
 var _cloundfun = __webpack_require__(/*! ../../common/cloundfun.js */ 20);
-var _vuex = __webpack_require__(/*! vuex */ 12);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Search = function Search() {__webpack_require__.e(/*! require.ensure | pages/index/components/search */ "pages/index/components/search").then((function () {return resolve(__webpack_require__(/*! ./components/search.vue */ 83));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Ticket = function Ticket() {__webpack_require__.e(/*! require.ensure | pages/index/components/ticket */ "pages/index/components/ticket").then((function () {return resolve(__webpack_require__(/*! ./components/ticket.vue */ 90));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Classfiy = function Classfiy() {__webpack_require__.e(/*! require.ensure | pages/index/components/classify */ "pages/index/components/classify").then((function () {return resolve(__webpack_require__(/*! ./components/classify.vue */ 97));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var ScrollContent = function ScrollContent() {__webpack_require__.e(/*! require.ensure | pages/index/components/scroll-content */ "pages/index/components/scroll-content").then((function () {return resolve(__webpack_require__(/*! ./components/scroll-content.vue */ 104));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Article = function Article() {__webpack_require__.e(/*! require.ensure | pages/index/components/article */ "pages/index/components/article").then((function () {return resolve(__webpack_require__(/*! ./components/article.vue */ 111));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 76));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var _vuex = __webpack_require__(/*! vuex */ 12);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var Search = function Search() {__webpack_require__.e(/*! require.ensure | pages/index/components/search */ "pages/index/components/search").then((function () {return resolve(__webpack_require__(/*! ./components/search.vue */ 101));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Ticket = function Ticket() {__webpack_require__.e(/*! require.ensure | pages/index/components/ticket */ "pages/index/components/ticket").then((function () {return resolve(__webpack_require__(/*! ./components/ticket.vue */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Classfiy = function Classfiy() {__webpack_require__.e(/*! require.ensure | pages/index/components/classify */ "pages/index/components/classify").then((function () {return resolve(__webpack_require__(/*! ./components/classify.vue */ 115));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var ScrollContent = function ScrollContent() {__webpack_require__.e(/*! require.ensure | pages/index/components/scroll-content */ "pages/index/components/scroll-content").then((function () {return resolve(__webpack_require__(/*! ./components/scroll-content.vue */ 122));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Article = function Article() {__webpack_require__.e(/*! require.ensure | pages/index/components/article */ "pages/index/components/article").then((function () {return resolve(__webpack_require__(/*! ./components/article.vue */ 129));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 94));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 // 第3房引用插件loadmore
 var _default =
-
 {
   components: {
     Search: Search,
@@ -192,7 +190,7 @@ var _default =
 
   data: function data() {
     return {
-      title: 'Hello',
+      title: "Hello",
       isFixed: false, // ScrollContent 组件页面滚动样式开关
       rect: 0, // 监听index页面滚动的距离
       menutop: 0, // 获取ScrollContent的距离高度
@@ -201,9 +199,9 @@ var _default =
       article: [], // article 组件数据
       loadingShow: false, // tab切换时 loading的状态
       navLoading: false, // 上拉下载列表的loading
-      nav: 'recommend', // tab 切换的初始值
+      nav: "recommend", // tab 切换的初始值
       pageId: 0, // 上拉加载list的列表页数量
-      uniload: 'loading',
+      uniload: "loading",
       loadmore: false, // 隐藏上拉加载
       noneShow: false, // 若数据列表为空，则显示无数据提示
       homeLoadShow: true // homeLoad组件显示
@@ -215,7 +213,7 @@ var _default =
   // 计算属性 时刻监听数据的变化更改数值；
   computed: _objectSpread({},
 
-  (0, _vuex.mapState)(['list', 'loading', 'navObj', 'nonedata']), {
+  (0, _vuex.mapState)(["list", "loading", "navObj", "nonedata"]), {
     // 渠道tab 切换的数据
     count: function count() {
       this.article = this.list.listing;
@@ -248,14 +246,18 @@ var _default =
   methods: {
     // 获取轮播数据
     getDB: function getDB() {var _this = this;
-      var banner = 'banner';
-      var tab = 'tab';
-      var listing = 'recommend';
+      var banner = "banner";
+      var tab = "tab";
+      var listing = "recommend";
       // 并发批量请求数据：promise all 是等banner的数组和tab 的值都同时拿到后，才会同时渲染数据
-      Promise.all([(0, _cloundfun.home)(banner), (0, _cloundfun.home)(tab), (0, _cloundfun.homeList)(listing, this.pageId)]).then(function (res) {
+      Promise.all([
+      (0, _cloundfun.home)(banner),
+      (0, _cloundfun.home)(tab),
+      (0, _cloundfun.homeList)(listing, this.pageId)]).
+      then(function (res) {
         _this.banner = res[0].data;
         _this.tab = res[1].data;
-        console.log(_this.tab, 'tab');
+        console.log(_this.tab, "tab");
         _this.article = res[2].data;
         _this.homeLoadShow = false;
       });
@@ -263,12 +265,12 @@ var _default =
 
     // 上拉加载数据
     pullonPage: function pullonPage() {var _this2 = this;
-      console.log(this.nav, '9999');
+      console.log(this.nav, "9999");
       (0, _cloundfun.homeList)(this.nav, this.pageId).then(function (res) {
         // 数组合并方法
         // this.article = this.article.concat(res.data); // 方法一
         if (!res.data.length) {
-          _this2.uniload = 'noMore';
+          _this2.uniload = "noMore";
         } else {
           _this2.article = [].concat(_toConsumableArray(_this2.article), _toConsumableArray(res.data)); // 方法二
         }
@@ -276,20 +278,72 @@ var _default =
     } },
 
 
+  /**
+          * 监听页面显示 onShow
+          * */
+  onShow: function onShow() {
+    // 每次从未激活状态变成激活状态
+    console.log("onShow");
+    wx.showModal({
+      title: "测试",
+      content: "34567",
+      showCancel: true,
+      cancelText: "取消",
+      cancelColor: "#000000",
+      confirmText: "确定",
+      confirmColor: "#3CC51F" });
 
-
-
-  // 小程序生命周期函数 如下函数
+  },
+  /**
+      * 监听页面隐藏 onHide
+      * */
+  onHide: function onHide() {
+    // 每次从激活状态变成未激活状态
+    console.log("onHide");
+  },
+  /**
+      * 监听页面加载onLoad
+      * */
   onLoad: function onLoad() {
+    console.log("onLoad");
     // 微信小程序 无window, 获取页面元素使用如下方法
     var query = wx.createSelectorQuery();
-    query.select('#content').boundingClientRect();
+    query.select("#content").boundingClientRect();
     query.selectViewport().scrollOffset();
     query.exec(function (res) {
       // 显示滚动组件的竖直 滚动位置
       this.menutop = res[0].top;
     });
   },
+  /**
+      * 监听页面卸载 onUnload
+      * */
+  onUnload: function onUnload() {
+    // 正常关闭时的执行状态
+    console.log("onUnload");
+  },
+  /**
+      * 监听页面显示 onReady
+      * */
+  onReady: function onReady() {
+    // 全部加载和显示完成，可以提供用户操作
+    console.log("onReady");
+  },
+  /**
+      * 监听页面上拉处理函数
+      * */
+  onPullDownRefresh: function onPullDownRefresh() {
+    // 全部加载和显示完成，可以提供用户操作
+    console.log("onPullDownRefresh");
+  },
+  /**
+      * 用户点击右上角分享
+      * */
+  onShareAppMessage: function onShareAppMessage() {
+    // 设置分享转发功能
+    console.log("onShareAppMessage");
+  },
+
   // 页面生命周期-监听ScrollContent组件向上滑动的高度，然后让该组件定位在头部上；
   onPageScroll: function onPageScroll(e) {
     this.rect = e.scrollTop;
@@ -298,7 +352,7 @@ var _default =
   onReachBottom: function onReachBottom() {
     // 上拉加载显示上拉加载组件
     this.loadmore = true;
-    this.uniload = 'loading';
+    this.uniload = "loading";
     this.pageId++;
     this.pullonPage();
   } };exports.default = _default;

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/strategy/strategy",
     "pages/my/my",
-    "pages/city/city"
+    "pages/city/city",
+    "pages/travels/travels",
+    "pages/db-data/db-data"
   ],
   "subPackages": [],
   "window": {
@@ -43,6 +45,5 @@
     "loader": "/element/loading",
     "nonedata": "/element/none",
     "homeload": "/element/homeload"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

@@ -22,4 +22,22 @@ var  addressData = function(){
 	})
 }
 
-export { addressData }
+// 公用预览 图片
+var previewImg = function(index,imgList){
+	return new Promise((resolve,reject)=>{
+		   // 预览图片
+		        uni.previewImage({
+					current:index,
+		            urls: imgList,
+		            longPressActions: {
+		                itemList: ['发送给朋友', '保存图片', '收藏'],
+		            }
+		        }).then(res=>{ 
+					resolve(res)
+				}).catch(err=>{
+					reject(err)
+				})
+    })
+}
+
+export { addressData, previewImg }
